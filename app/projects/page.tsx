@@ -15,24 +15,28 @@ export default function ProjectsPage() {
           <div className="grid md:grid-cols-2 gap-8">
             {[
               {
-                title: "RemoteDialog+",
-                description: "The first approach specifically implemented for routine patient-clinician meetings that are therapeutically effective using Machine learning. Designed machine learning algorithms that enhanced therapy session quality for the East London NHS Foundation Trust clinical group by 20% as measured by clinicians. The platform is now being piloted by the East London NHS Foundation Trust and projected to serve 50+ NHS trusts across the United Kingdom upon full rollout.",
-                tech: ["Machine Learning", "Python", "PyTorch", "BERT", "Web Applications"],
+                title: "AI Researcher Agent",
+                description:"An intelligent research assistant that combines web search, content scraping, and AI-powered information extraction to provide structured research results.",
+                tech: ["Machine Learning", "Python", "langchain", "Serper API  ","Nextjs", "Docker"],
+                github: "https://github.com/suyog-pipliwaal/Deep-search-agent",
               },
               {
                 title: "Multi-Modal Disfluency Detection",
                 description: "Engineered a multi-modal disfluency detection model specifically for the German language by integrating transcripts, audio samples, and hand gestures. Realized state-of-the-art performance utilizing BERT frameworks and audio transformer architectures tailored for the German dialect, resulting in exceptional metrics including a remarkable accuracy rate of 0.98 and F1 score at 0.41.",
                 tech: ["Deep Learning", "BERT", "Transformers", "PyTorch", "torchaudio", "Multi-modal Learning"],
+                github: "#",
               },
               {
                 title: "Crowd Mics Mobile Application",
                 description: "Developed and deployed mobile applications for iOS and Android platforms utilizing React-Native, achieving a 100% shared UI codebase that enhanced development efficiency across device ecosystems. Collaborated on innovative solutions targeting audio processing delays; achieved a reduction of latency from 400ms down to just 80ms, dramatically improving real-time interaction for users. The app is available on Google Play Store and Apple App Store.",
                 tech: ["React Native", "JavaScript", "Node.js", "Audio Processing", "iOS", "Android"],
+                github: "#",
               },
               {
                 title: "CI/CD Pipeline with Jenkins and Docker",
                 description: "Launched a CI/CD pipeline with Jenkins and Docker, achieving 99.99% uptime and reducing deployment time significantly. This infrastructure improvement enhanced the development workflow and ensured reliable, automated deployments for production applications.",
                 tech: ["Jenkins", "Docker", "CI/CD", "DevOps", "Linux"],
+                github: "#",
               },
             ].map((project, index) => (
               <div
@@ -55,6 +59,21 @@ export default function ProjectsPage() {
                     </span>
                   ))}
                 </div>
+                {project.github && (
+                  <div className="mt-4">
+                    <a
+                      href={project.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 text-black dark:text-white hover:opacity-70 transition-opacity border border-black dark:border-white px-4 py-2 rounded"
+                    >
+                      <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path fillRule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clipRule="evenodd" />
+                      </svg>
+                      Source Code
+                    </a>
+                  </div>
+                )}
               </div>
             ))}
           </div>
