@@ -21,22 +21,10 @@ export default function ProjectsPage() {
                 github: "https://github.com/suyog-pipliwaal/Deep-search-agent",
               },
               {
-                title: "Multi-Modal Disfluency Detection",
-                description: "Engineered a multi-modal disfluency detection model specifically for the German language by integrating transcripts, audio samples, and hand gestures. Realized state-of-the-art performance utilizing BERT frameworks and audio transformer architectures tailored for the German dialect, resulting in exceptional metrics including a remarkable accuracy rate of 0.98 and F1 score at 0.41.",
-                tech: ["Deep Learning", "BERT", "Transformers", "PyTorch", "torchaudio", "Multi-modal Learning"],
-                github: "#",
-              },
-              {
-                title: "Crowd Mics Mobile Application",
-                description: "Developed and deployed mobile applications for iOS and Android platforms utilizing React-Native, achieving a 100% shared UI codebase that enhanced development efficiency across device ecosystems. Collaborated on innovative solutions targeting audio processing delays; achieved a reduction of latency from 400ms down to just 80ms, dramatically improving real-time interaction for users. The app is available on Google Play Store and Apple App Store.",
-                tech: ["React Native", "JavaScript", "Node.js", "Audio Processing", "iOS", "Android"],
-                github: "#",
-              },
-              {
-                title: "CI/CD Pipeline with Jenkins and Docker",
-                description: "Launched a CI/CD pipeline with Jenkins and Docker, achieving 99.99% uptime and reducing deployment time significantly. This infrastructure improvement enhanced the development workflow and ensured reliable, automated deployments for production applications.",
-                tech: ["Jenkins", "Docker", "CI/CD", "DevOps", "Linux"],
-                github: "#",
+                title: "Emotions_Prediction",
+                description:"Build Emotions Prediction for a Hackathon Develop a robust image classification model capable of predicting the emotion depicted in an image Global rank 4",
+                tech: ["Deep Learning", "Pytorch", "Huggingface", "Torchvision"],
+                github: "https://github.com/suyog-pipliwaal/Emotions_Prediction",
               },
             ].map((project, index) => (
               <div
