@@ -26,6 +26,15 @@ export default function ProjectsPage() {
                 tech: ["Deep Learning", "Pytorch", "Huggingface", "Torchvision"],
                 github: "https://github.com/suyog-pipliwaal/Emotions_Prediction",
               },
+             {
+              title: "Ultra-Lightweight Client-Side AI for Voice Interview Summaries",
+              description:`
+                          A fully client-side browser-based AI system that performs real-time speech transcription
+                          interview summarization with ultra-low latency, running entirely offline without server dependencies.`,
+              tech: ["Client-Side AI", "Speech Processing", "ONNX","WebAssembly (WASM)", "JavaScript","Web Audio API"],
+              github: "https://github.com/suyog-pipliwaal/Ultra-Lightweight-Client-Side-AI-for-Voice-Interview-Summaries",
+            }
+
             ].map((project, index) => (
               <div
                 key={index}
