@@ -41,7 +41,7 @@ Traditional machine learning approaches are benchmarked against fine-tuned BERT 
 Model performance is evaluated using Quadratic Weighted Kappa, ensuring strong agreement with human raters.
 `,
               tech: ["Python", "scikit-learn", "Hugging Face Transformers", "PyTorch  "],
-              github: "https://github.com/suyog-pipliwaal/Ultra-Lightweight-Client-Side-AI-for-Voice-Interview-Summaries",
+              github: "https://github.com/suyog-pipliwaal/Automate-Essay-Scoring",
             }
 
             ].map((project, index) => (
