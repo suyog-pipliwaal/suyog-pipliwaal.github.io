@@ -42,6 +42,18 @@ Model performance is evaluated using Quadratic Weighted Kappa, ensuring strong a
 `,
               tech: ["Python", "scikit-learn", "Hugging Face Transformers", "PyTorch  "],
               github: "https://github.com/suyog-pipliwaal/Automate-Essay-Scoring",
+            },{
+              title: "Deeper Networks for Image classification",
+              description:`The report proposes a novel image classification model that concatenates convolutional features from VGG16 and ResNet blocks and feeds them into a linear classifier, creating a deeper hybrid CNN architecture.​
+                            Trained on MNIST and CIFAR10 with SGD and cross-entropy loss, the model achieves 99.7% accuracy on MNIST and 84.9% on CIFAR10, comparable to state-of-the-art results.
+                          `,
+              tech: [" Python with PyTorch (for VGG16/ResNet feature extractors)", "SGD optimizer", "CrossEntropyLoss"],
+              github: "https://github.com/suyog-pipliwaal/Deeper-Networks-for-Image-Classification",
+            },{
+              title: "Impact of Activation Functions on CNN Performance for Clothing Classificationx",
+              description:"This project systematically studies a multi-class classification problem on Fashion-MNIST clothing images while analyzing how different activation functions affect model convergence, accuracy, and generalization.",
+              tech: [" Python with PyTorch", "MNIST Dataset", "CNN", "Activation function"],
+              github: "https://github.com/suyog-pipliwaal/Fashion-Mnist-Classification",
             }
 
             ].map((project, index) => (
