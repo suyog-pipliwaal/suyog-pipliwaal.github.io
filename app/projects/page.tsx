@@ -33,6 +33,15 @@ export default function ProjectsPage() {
                           interview summarization with ultra-low latency, running entirely offline without server dependencies.`,
               tech: ["Client-Side AI", "Speech Processing", "ONNX","WebAssembly (WASM)", "JavaScript","Web Audio API"],
               github: "https://github.com/suyog-pipliwaal/Ultra-Lightweight-Client-Side-AI-for-Voice-Interview-Summaries",
+            }, {
+              title: "Automated Essay Scoring",
+              description:`This project implements an automated essay scoring system based on a Kaggle competition.
+It explores a progression from classical NLP baselines to transformer-based models.
+Traditional machine learning approaches are benchmarked against fine-tuned BERT to capture deeper semantic and contextual information.
+Model performance is evaluated using Quadratic Weighted Kappa, ensuring strong agreement with human raters.
+`,
+              tech: ["Python", "scikit-learn", "Hugging Face Transformers", "PyTorch  "],
+              github: "https://github.com/suyog-pipliwaal/Ultra-Lightweight-Client-Side-AI-for-Voice-Interview-Summaries",
             }
 
             ].map((project, index) => (
