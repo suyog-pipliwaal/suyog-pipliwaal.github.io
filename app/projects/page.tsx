@@ -1,5 +1,6 @@
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
+import { title } from "process";
 
 export default function ProjectsPage() {
   return (
@@ -21,8 +22,19 @@ export default function ProjectsPage() {
                 github: "https://github.com/suyog-pipliwaal/Deep-search-agent",
               },
               {
+                title:"Machine-hack-Hackathon",
+               description: `This repo contains solutions for MachineHack hackathons.
+                              The Leaf Disease Classification Challenge — <strong>Rank 10</strong>
+                              The News Category Hackathon — <strong>Rank 85</strong>
+                              The Watermark Challenge — <strong>Rank 18</strong>
+                              Flight Price Prediction — <strong>Rank 308</strong>
+                            `,
+                tech:["Python", "CNN", "Classification","Hackthon"],
+                github:"https://github.com/suyog-pipliwaal/Machine-hack-Hackathon",
+              },
+              {
                 title: "Emotions_Prediction",
-                description:"Build Emotions Prediction for a Hackathon Develop a robust image classification model capable of predicting the emotion depicted in an image Global rank 4",
+                description:"Build Emotions Prediction for a Hackathon Develop a robust image classification model capable of predicting the emotion depicted in an image <strong>Global rank 4</strong>",
                 tech: ["Deep Learning", "Pytorch", "Huggingface", "Torchvision"],
                 github: "https://github.com/suyog-pipliwaal/Emotions_Prediction",
               },
@@ -64,9 +76,9 @@ Model performance is evaluated using Quadratic Weighted Kappa, ensuring strong a
                 <h3 className="text-2xl font-bold text-black dark:text-white mb-4">
                   {project.title}
                 </h3>
-                <p className="text-black dark:text-white mb-6 leading-relaxed opacity-80">
-                  {project.description}
-                </p>
+               <p className="text-black dark:text-white mb-6 leading-relaxed opacity-80 whitespace-pre-line"
+                  dangerouslySetInnerHTML={{ __html: project.description }}
+                />
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.tech.map((tech) => (
                     <span
