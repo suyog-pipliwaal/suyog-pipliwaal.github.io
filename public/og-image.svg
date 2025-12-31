@@ -1,0 +1,30 @@
+<svg width="1200" height="630" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="1200" height="630" fill="#000000"/>
+  
+  <!-- Content Container -->
+  <g transform="translate(100, 200)">
+    <!-- Name -->
+    <text x="0" y="0" font-family="Arial, sans-serif" font-size="72" font-weight="bold" fill="#FFFFFF">
+      Suyog Pipliwal
+    </text>
+    
+    <!-- Title -->
+    <text x="0" y="80" font-family="Arial, sans-serif" font-size="48" fill="#FFFFFF" opacity="0.9">
+      AI Research Engineer
+    </text>
+    
+    <!-- Subtitle -->
+    <text x="0" y="140" font-family="Arial, sans-serif" font-size="36" fill="#FFFFFF" opacity="0.7">
+      Deep Learning Specialist | Machine Learning Engineer
+    </text>
+    
+    <!-- Decorative line -->
+    <line x1="0" y1="180" x2="200" y2="180" stroke="#FFFFFF" stroke-width="4" opacity="0.5"/>
+  </g>
+  
+  <!-- Bottom right accent -->
+  <circle cx="1100" cy="530" r="80" fill="#FFFFFF" opacity="0.1"/>
+  <circle cx="1100" cy="530" r="50" fill="#FFFFFF" opacity="0.15"/>
+</svg>
+

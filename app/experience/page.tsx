@@ -1,17 +1,29 @@
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
+import Breadcrumbs from "../components/Breadcrumbs";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Experience",
+  description: "Suyog Pipliwal's professional experience as AI Research Engineer at Queen Mary University of London and Full-stack Developer at Antares.Tech. Specialized in machine learning, NLP, and web applications.",
+  openGraph: {
+    title: "Experience - Suyog Pipliwal",
+    description: "AI Research Engineer at Queen Mary University of London and Full-stack Developer at Antares.Tech. Specialized in machine learning, NLP, and web applications.",
+  },
+};
 
 export default function ExperiencePage() {
   return (
     <div className="min-h-screen bg-white font-sans dark:bg-black">
       <Navigation />
+      <Breadcrumbs />
       
       {/* Experience Section */}
-      <section className="py-20 sm:py-24 md:py-32 px-4 sm:px-6 bg-white dark:bg-black">
+      <main className="py-8 sm:py-12 md:py-16 px-4 sm:px-6 bg-white dark:bg-black">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-black dark:text-white mb-8 sm:mb-12 md:mb-16">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-black dark:text-white mb-8 sm:mb-12 md:mb-16">
             Experience
-          </h2>
+          </h1>
           <div className="space-y-6 sm:space-y-8">
             {[
               {
@@ -72,7 +84,7 @@ export default function ExperiencePage() {
             ))}
           </div>
         </div>
-      </section>
+      </main>
 
       <Footer />
     </div>

@@ -1,17 +1,29 @@
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
+import Breadcrumbs from "../components/Breadcrumbs";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Education",
+  description: "Suyog Pipliwal's educational background. Master of Science in Artificial Intelligence from Queen Mary University of London and Bachelor of Technology in Computer Science from IIIT Guwahati.",
+  openGraph: {
+    title: "Education - Suyog Pipliwal",
+    description: "Master of Science in Artificial Intelligence from Queen Mary University of London and Bachelor of Technology in Computer Science from IIIT Guwahati.",
+  },
+};
 
 export default function EducationPage() {
   return (
     <div className="min-h-screen bg-white font-sans dark:bg-black">
       <Navigation />
+      <Breadcrumbs />
       
       {/* Education Section */}
-      <section className="py-20 sm:py-24 md:py-32 px-4 sm:px-6">
+      <main className="py-8 sm:py-12 md:py-16 px-4 sm:px-6">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-black dark:text-white mb-8 sm:mb-12 md:mb-16">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-black dark:text-white mb-8 sm:mb-12 md:mb-16">
             Education
-          </h2>
+          </h1>
           <div className="space-y-6 sm:space-y-8">
             {[
               {
@@ -58,7 +70,7 @@ export default function EducationPage() {
             ))}
           </div>
         </div>
-      </section>
+      </main>
 
       <Footer />
     </div>

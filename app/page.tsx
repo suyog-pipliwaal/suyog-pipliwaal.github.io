@@ -1,6 +1,17 @@
 import Link from "next/link";
 import Navigation from "./components/Navigation";
 import Footer from "./components/Footer";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Home",
+  description: "AI Research Engineer and Deep Learning Specialist. Machine Learning Engineer with over 4 years of experience in algorithm development and data analysis. Master of Science in Artificial Intelligence from Queen Mary University of London.",
+  openGraph: {
+    title: "Suyog Pipliwal - AI Research Engineer",
+    description: "AI Research Engineer and Deep Learning Specialist. Machine Learning Engineer with over 4 years of experience in algorithm development and data analysis.",
+    type: "profile",
+  },
+};
 
 export default function Home() {
   return (
@@ -8,10 +19,10 @@ export default function Home() {
       <Navigation />
       
       {/* Home Section */}
-      <section className="min-h-screen flex items-center justify-center px-4 sm:px-6 pt-20 pb-12">
+      <main className="min-h-screen flex items-center justify-center px-4 sm:px-6 pt-20 pb-12">
         <div className="max-w-4xl mx-auto text-center">
           <div className="mb-6 sm:mb-8">
-            <div className="w-24 h-24 sm:w-32 sm:h-32 mx-auto rounded-full bg-black dark:bg-white flex items-center justify-center text-2xl sm:text-4xl font-bold text-white dark:text-black mb-4 sm:mb-6 border-2 border-black dark:border-white">
+            <div className="w-24 h-24 sm:w-32 sm:h-32 mx-auto rounded-full bg-black dark:bg-white flex items-center justify-center text-2xl sm:text-4xl font-bold text-white dark:text-black mb-4 sm:mb-6 border-2 border-black dark:border-white" aria-label="Suyog Pipliwal initials">
               SP
             </div>
           </div>
@@ -53,7 +64,7 @@ export default function Home() {
             </a>
           </div>
         </div>
-      </section>
+      </main>
 
       <Footer />
     </div>

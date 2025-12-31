@@ -1,22 +1,35 @@
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
+import Breadcrumbs from "../components/Breadcrumbs";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Curriculum Vitae",
+  description: "Download Suyog Pipliwal's CV. Deep Learning Specialist and Machine Learning Engineer with expertise in Python, PyTorch, TensorFlow, NLP, and AI research. View skills, tools, and technologies.",
+  openGraph: {
+    title: "Curriculum Vitae - Suyog Pipliwal",
+    description: "Deep Learning Specialist and Machine Learning Engineer with expertise in Python, PyTorch, TensorFlow, NLP, and AI research.",
+  },
+};
 
 export default function CVPage() {
   return (
     <div className="min-h-screen bg-white font-sans dark:bg-black">
       <Navigation />
+      <Breadcrumbs />
       
       {/* CV Section */}
-      <section className="py-20 sm:py-24 md:py-32 px-4 sm:px-6 bg-white dark:bg-black">
+      <main className="py-8 sm:py-12 md:py-16 px-4 sm:px-6 bg-white dark:bg-black">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-black dark:text-white mb-6 sm:mb-8">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-black dark:text-white mb-6 sm:mb-8">
             Curriculum Vitae
-          </h2>
+          </h1>
           <div className="mb-6 sm:mb-8">
             <a
               href="/suyog_pipliwal_resume.pdf"
               download
               className="inline-flex items-center gap-2 px-4 sm:px-6 py-3 rounded-full bg-black text-white dark:bg-white dark:text-black hover:opacity-80 transition-opacity font-medium border-2 border-black dark:border-white text-sm sm:text-base"
+              aria-label="Download Suyog Pipliwal's CV in PDF format"
             >
               Download CV (PDF)
             </a>
@@ -116,7 +129,7 @@ export default function CVPage() {
             </div>
           </div>
         </div>
-      </section>
+      </main>
 
       <Footer />
     </div>

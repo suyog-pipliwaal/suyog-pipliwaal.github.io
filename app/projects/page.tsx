@@ -1,17 +1,29 @@
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
+import Breadcrumbs from "../components/Breadcrumbs";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Projects",
+  description: "Explore AI and Machine Learning projects by Suyog Pipliwal. Including AI Researcher Agent, Machine Learning Hackathons, Emotion Prediction, Client-Side AI, and more. View source code on GitHub.",
+  openGraph: {
+    title: "Projects - Suyog Pipliwal",
+    description: "Explore AI and Machine Learning projects including AI Researcher Agent, Machine Learning Hackathons, Emotion Prediction, and more.",
+  },
+};
 
 export default function ProjectsPage() {
   return (
     <div className="min-h-screen bg-white font-sans dark:bg-black">
       <Navigation />
+      <Breadcrumbs />
       
       {/* Projects Section */}
-      <section className="py-20 sm:py-24 md:py-32 px-4 sm:px-6 bg-white dark:bg-black">
+      <main className="py-8 sm:py-12 md:py-16 px-4 sm:px-6 bg-white dark:bg-black">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-black dark:text-white mb-8 sm:mb-12 md:mb-16">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-black dark:text-white mb-8 sm:mb-12 md:mb-16">
             Projects
-          </h2>
+          </h1>
           <div className="grid md:grid-cols-2 gap-6 sm:gap-8">
             {[
               {
@@ -107,7 +119,7 @@ Model performance is evaluated using Quadratic Weighted Kappa, ensuring strong a
             ))}
           </div>
         </div>
-      </section>
+      </main>
 
       <Footer />
     </div>
