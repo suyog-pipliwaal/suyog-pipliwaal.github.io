@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Noto_Sans } from "next/font/google";
 import "./globals.css";
 import PageTransition from "./components/PageTransition";
@@ -12,6 +12,12 @@ const notoSans = Noto_Sans({
 export const metadata: Metadata = {
   title: "Suyog Resume",
   description: "AI Research Engineer and Deep Learning Specialist. Portfolio showcasing research projects, publications, and experience in machine learning and AI.",
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
 };
 
 export default function RootLayout({

@@ -7,24 +7,24 @@ export default function CVPage() {
       <Navigation />
       
       {/* CV Section */}
-      <section className="py-32 px-6 bg-white dark:bg-black">
+      <section className="py-20 sm:py-24 md:py-32 px-4 sm:px-6 bg-white dark:bg-black">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-bold text-black dark:text-white mb-8">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-black dark:text-white mb-6 sm:mb-8">
             Curriculum Vitae
           </h2>
-          <div className="mb-8">
+          <div className="mb-6 sm:mb-8">
             <a
               href="/suyog_pipliwal_resume.pdf"
               download
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-black text-white dark:bg-white dark:text-black hover:opacity-80 transition-opacity font-medium border-2 border-black dark:border-white"
+              className="inline-flex items-center gap-2 px-4 sm:px-6 py-3 rounded-full bg-black text-white dark:bg-white dark:text-black hover:opacity-80 transition-opacity font-medium border-2 border-black dark:border-white text-sm sm:text-base"
             >
               Download CV (PDF)
             </a>
           </div>
-          <div className="space-y-8 text-black dark:text-white">
+          <div className="space-y-6 sm:space-y-8 text-black dark:text-white">
             <div>
-              <h3 className="text-2xl font-bold text-black dark:text-white mb-4">Summary</h3>
-              <p className="text-lg leading-relaxed">
+              <h3 className="text-xl sm:text-2xl font-bold text-black dark:text-white mb-3 sm:mb-4">Summary</h3>
+              <p className="text-base sm:text-lg leading-relaxed">
                 Deep Learning Specialist and Machine Learning Engineer aspirant with over 4 years of experience 
                 in algorithm development and data analysis. Spearheaded research initiatives that enhanced 
                 patient-clinician interactions within therapeutic web-based platforms. Achievements include 
@@ -34,8 +34,8 @@ export default function CVPage() {
               </p>
             </div>
             <div>
-              <h3 className="text-2xl font-bold text-black dark:text-white mb-4">Tools and Languages</h3>
-              <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+              <h3 className="text-xl sm:text-2xl font-bold text-black dark:text-white mb-3 sm:mb-4">Tools and Languages</h3>
+              <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-3 sm:gap-4">
                 {[
                   "Python",
                   "PyTorch",
@@ -57,16 +57,16 @@ export default function CVPage() {
                 ].map((skill) => (
                   <div
                     key={skill}
-                    className="p-4 rounded-lg bg-white dark:bg-black border border-black dark:border-white hover:opacity-70 transition-opacity"
+                    className="p-3 sm:p-4 rounded-lg bg-white dark:bg-black border border-black dark:border-white hover:opacity-70 transition-opacity"
                   >
-                    <div className="text-black dark:text-white font-medium">{skill}</div>
+                    <div className="text-black dark:text-white font-medium text-sm sm:text-base">{skill}</div>
                   </div>
                 ))}
               </div>
             </div>
             <div>
-              <h3 className="text-2xl font-bold text-black dark:text-white mb-4">Quantitative Research</h3>
-              <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+              <h3 className="text-xl sm:text-2xl font-bold text-black dark:text-white mb-3 sm:mb-4">Quantitative Research</h3>
+              <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-3 sm:gap-4">
                 {[
                   "Machine Learning",
                   "Deep Learning",
@@ -85,16 +85,16 @@ export default function CVPage() {
                 ].map((skill) => (
                   <div
                     key={skill}
-                    className="p-4 rounded-lg bg-white dark:bg-black border border-black dark:border-white hover:opacity-70 transition-opacity"
+                    className="p-3 sm:p-4 rounded-lg bg-white dark:bg-black border border-black dark:border-white hover:opacity-70 transition-opacity"
                   >
-                    <div className="text-black dark:text-white font-medium">{skill}</div>
+                    <div className="text-black dark:text-white font-medium text-sm sm:text-base">{skill}</div>
                   </div>
                 ))}
               </div>
             </div>
             <div>
-              <h3 className="text-2xl font-bold text-black dark:text-white mb-4">Technologies/Frameworks</h3>
-              <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+              <h3 className="text-xl sm:text-2xl font-bold text-black dark:text-white mb-3 sm:mb-4">Technologies/Frameworks</h3>
+              <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-3 sm:gap-4">
                 {[
                   "Linux",
                   "Git",
@@ -107,9 +107,9 @@ export default function CVPage() {
                 ].map((skill) => (
                   <div
                     key={skill}
-                    className="p-4 rounded-lg bg-white dark:bg-black border border-black dark:border-white hover:opacity-70 transition-opacity"
+                    className="p-3 sm:p-4 rounded-lg bg-white dark:bg-black border border-black dark:border-white hover:opacity-70 transition-opacity"
                   >
-                    <div className="text-black dark:text-white font-medium">{skill}</div>
+                    <div className="text-black dark:text-white font-medium text-sm sm:text-base">{skill}</div>
                   </div>
                 ))}
               </div>

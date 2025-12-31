@@ -38,4 +38,19 @@ html {
 /* Smooth page transitions */
 body {
   overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Mobile-friendly touch targets */
+a, button {
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Better text rendering on mobile */
+@media (max-width: 640px) {
+  body {
+    text-rendering: optimizeLegibility;
+  }
 }

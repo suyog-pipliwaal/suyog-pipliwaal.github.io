@@ -7,12 +7,12 @@ export default function PublicationsPage() {
       <Navigation />
       
       {/* Publications Section */}
-      <section className="py-32 px-6">
+      <section className="py-20 sm:py-24 md:py-32 px-4 sm:px-6">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-bold text-black dark:text-white mb-16">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-black dark:text-white mb-8 sm:mb-12 md:mb-16">
             Publications
           </h2>
-          <div className="space-y-8">
+          <div className="space-y-6 sm:space-y-8">
             {[
               {
                 title: "Characteristics of Common Experimental Dialogue Tasks: a Systematic Review & Taxonomy",
@@ -24,18 +24,18 @@ export default function PublicationsPage() {
             ].map((pub, index) => (
               <div
                 key={index}
-                className="p-8 rounded-lg bg-white dark:bg-black border border-black dark:border-white hover:opacity-80 transition-opacity"
+                className="p-6 sm:p-8 rounded-lg bg-white dark:bg-black border border-black dark:border-white hover:opacity-80 transition-opacity"
               >
-                <h3 className="text-2xl font-bold text-black dark:text-white mb-3">
+                <h3 className="text-xl sm:text-2xl font-bold text-black dark:text-white mb-3">
                   {pub.title}
                 </h3>
-                <p className="text-black dark:text-white mb-2 opacity-80">
+                <p className="text-sm sm:text-base text-black dark:text-white mb-2 opacity-80">
                   {pub.authors}
                 </p>
-                <p className="text-black dark:text-white mb-4 italic opacity-60">
+                <p className="text-sm sm:text-base text-black dark:text-white mb-4 italic opacity-60">
                   {pub.venue}, {pub.year}
                 </p>
-                <p className="text-black dark:text-white mb-6 leading-relaxed opacity-80">
+                <p className="text-sm sm:text-base text-black dark:text-white mb-6 leading-relaxed opacity-80">
                   {pub.description}
                 </p>
               </div>

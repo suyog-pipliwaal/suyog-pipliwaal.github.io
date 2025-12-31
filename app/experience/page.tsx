@@ -7,12 +7,12 @@ export default function ExperiencePage() {
       <Navigation />
       
       {/* Experience Section */}
-      <section className="py-32 px-6 bg-white dark:bg-black">
+      <section className="py-20 sm:py-24 md:py-32 px-4 sm:px-6 bg-white dark:bg-black">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-bold text-black dark:text-white mb-16">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-black dark:text-white mb-8 sm:mb-12 md:mb-16">
             Experience
           </h2>
-          <div className="space-y-8">
+          <div className="space-y-6 sm:space-y-8">
             {[
               {
                 title: "AI Research Engineer",
@@ -45,27 +45,27 @@ export default function ExperiencePage() {
             ].map((exp, index) => (
               <div
                 key={index}
-                className="p-8 rounded-lg bg-white dark:bg-black border border-black dark:border-white hover:opacity-80 transition-opacity"
+                className="p-6 sm:p-8 rounded-lg bg-white dark:bg-black border border-black dark:border-white hover:opacity-80 transition-opacity"
               >
                 <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
-                  <div>
-                    <h3 className="text-2xl font-bold text-black dark:text-white mb-2">
+                  <div className="flex-1">
+                    <h3 className="text-xl sm:text-2xl font-bold text-black dark:text-white mb-2">
                       {exp.title}
                     </h3>
-                    <p className="text-xl text-black dark:text-white mb-1 opacity-80">
+                    <p className="text-lg sm:text-xl text-black dark:text-white mb-1 opacity-80">
                       {exp.company}
                     </p>
-                    <p className="text-black dark:text-white opacity-60">
+                    <p className="text-sm sm:text-base text-black dark:text-white opacity-60">
                       {exp.location}
                     </p>
                   </div>
-                  <p className="text-black dark:text-white font-medium mt-4 md:mt-0 opacity-80">
+                  <p className="text-sm sm:text-base text-black dark:text-white font-medium mt-4 md:mt-0 opacity-80">
                     {exp.period}
                   </p>
                 </div>
-                <ul className="list-disc list-inside space-y-2 text-black dark:text-white opacity-80">
+                <ul className="list-disc list-inside space-y-2 text-sm sm:text-base text-black dark:text-white opacity-80 pl-2">
                   {exp.description.map((item, idx) => (
-                    <li key={idx}>{item}</li>
+                    <li key={idx} className="mb-1">{item}</li>
                   ))}
                 </ul>
               </div>
