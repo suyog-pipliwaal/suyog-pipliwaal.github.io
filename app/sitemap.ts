@@ -1,7 +1,5 @@
 import { MetadataRoute } from 'next'
 
-export const dynamic = 'force-static'
-
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://suyog-pipliwaal.github.io'
   
@@ -40,6 +38,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: `${baseUrl}/publications`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/opensource`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
       priority: 0.7,
     },
   ]

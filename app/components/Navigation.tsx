@@ -40,6 +40,9 @@ export default function Navigation() {
             <Link href="/projects" className="text-black dark:text-white hover:opacity-70 transition-opacity">
               Projects
             </Link>
+            <Link href="/opensource" className="text-black dark:text-white hover:opacity-70 transition-opacity">
+              Open source Contribution
+            </Link>
             <Link href="/cv" className="text-black dark:text-white hover:opacity-70 transition-opacity">
               CV
             </Link>
@@ -104,6 +107,13 @@ export default function Navigation() {
                 onClick={closeMenu}
               >
                 Projects
+              </Link>
+              <Link 
+                href="/opensource" 
+                className="text-black dark:text-white hover:opacity-70 transition-opacity py-2"
+                onClick={closeMenu}
+              >
+                Open source Contribution
               </Link>
               <Link 
                 href="/cv" 
