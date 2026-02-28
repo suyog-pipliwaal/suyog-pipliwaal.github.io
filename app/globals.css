@@ -1,30 +1,49 @@
 @import "tailwindcss";
 
 :root {
-  --background: #FFFFFF;
-  --foreground: #000000;
-  --primary: #000000;
-  --secondary: #000000;
-  --accent: #000000;
+  --background: #f7f8f4;
+  --foreground: #121617;
+  --surface: #ffffff;
+  --surface-alt: #f1f4ed;
+  --border: #d2d9cb;
+  --muted: #57605b;
+  --primary: #1f6f60;
+  --secondary: #e6b95d;
+  --accent: #2f4858;
+  --ring: rgba(31, 111, 96, 0.25);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
   --font-sans: var(--font-noto-sans);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #000000;
-    --foreground: #FFFFFF;
+    --background: #111716;
+    --foreground: #eef3ee;
+    --surface: #19211f;
+    --surface-alt: #202b28;
+    --border: #33423d;
+    --muted: #b2bfba;
+    --primary: #64baa9;
+    --secondary: #f3c96f;
+    --accent: #8bc3d7;
+    --ring: rgba(100, 186, 169, 0.35);
   }
 }
 
 body {
-  background: var(--background);
+  background:
+    radial-gradient(circle at 15% -10%, rgba(230, 185, 93, 0.22), transparent 40%),
+    radial-gradient(circle at 85% -15%, rgba(31, 111, 96, 0.2), transparent 35%),
+    var(--background);
   color: var(--foreground);
   font-family: var(--font-noto-sans), Noto Sans;
+  min-height: 100vh;
 }
 
 html {
@@ -42,10 +61,51 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+::selection {
+  background: var(--secondary);
+  color: #151515;
+}
+
 /* Mobile-friendly touch targets */
 a, button {
   touch-action: manipulation;
   -webkit-tap-highlight-color: transparent;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+.site-shell {
+  position: relative;
+  isolation: isolate;
+}
+
+.site-shell::before {
+  content: "";
+  position: fixed;
+  inset: -10% -5% auto;
+  height: 340px;
+  background: linear-gradient(90deg, rgba(230, 185, 93, 0.2), rgba(31, 111, 96, 0.15), rgba(47, 72, 88, 0.18));
+  filter: blur(70px);
+  opacity: 0.8;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.reveal-up {
+  opacity: 0;
+  transform: translateY(14px);
+  animation: reveal-up 0.7s ease forwards;
+}
+
+@keyframes reveal-up {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* Better text rendering on mobile */

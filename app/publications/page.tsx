@@ -5,31 +5,34 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Publications",
-  description: "Research publications by Suyog Pipliwal. Including systematic reviews and taxonomy of experimental dialogue tasks in AI and machine learning research.",
+  description:
+    "Research publications by Suyog Pipliwal, including systematic reviews and taxonomy of experimental dialogue tasks in AI and machine learning research.",
   openGraph: {
     title: "Publications - Suyog Pipliwal",
-    description: "Research publications including systematic reviews and taxonomy of experimental dialogue tasks in AI and machine learning research.",
+    description:
+      "Research publications including systematic reviews and taxonomy of experimental dialogue tasks in AI and machine learning research.",
   },
 };
 
-export default function PublicationsPage() {
-  const publications = [
-    {
-      title: "Characteristics of Common Experimental Dialogue Tasks: a Systematic Review & Taxonomy",
-      authors: "Ella Cullen, Patrick Healey, Paraskevi Argyriou and Suyog Pipliwal",
-      venue: "Research Publication",
-      year: "2024",
-      description: "A systematic review and taxonomy of common experimental dialogue tasks, providing comprehensive analysis and classification of dialogue research methodologies.",
-    },
-  ];
+const publications = [
+  {
+    title: "Characteristics of Common Experimental Dialogue Tasks: A Systematic Review and Taxonomy",
+    authors: ["Ella Cullen", "Patrick Healey", "Paraskevi Argyriou", "Suyog Pipliwal"],
+    venue: "Research Publication",
+    year: "2024",
+    description:
+      "A structured review and taxonomy of experimental dialogue tasks, offering a consolidated view of task design patterns and evaluation practices in dialogue research.",
+  },
+];
 
+export default function PublicationsPage() {
   const articleSchema = publications.map((pub) => ({
     "@context": "https://schema.org",
     "@type": "ScholarlyArticle",
     headline: pub.title,
-    author: pub.authors.split(" and ").map((author) => ({
+    author: pub.authors.map((author) => ({
       "@type": "Person",
-      name: author.trim(),
+      name: author,
     })),
     datePublished: pub.year,
     publisher: {
@@ -40,40 +43,46 @@ export default function PublicationsPage() {
   }));
 
   return (
-    <div className="min-h-screen bg-white font-sans dark:bg-black">
+    <div className="site-shell min-h-screen font-sans">
       <Navigation />
       <Breadcrumbs />
-      
-      {/* Publications Section */}
-      <main className="py-8 sm:py-12 md:py-16 px-4 sm:px-6">
-        <div className="max-w-4xl mx-auto">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-black dark:text-white mb-8 sm:mb-12 md:mb-16">
-            Publications
-          </h1>
-          <div className="space-y-6 sm:space-y-8">
-            {publications.map((pub, index) => (
+
+      <main className="px-4 sm:px-6 pb-10 sm:pb-14">
+        <section className="max-w-5xl mx-auto">
+          <div className="rounded-3xl border border-[var(--border)] bg-[var(--surface)] px-6 py-7 sm:px-8 sm:py-9">
+            <p className="text-sm font-medium text-[var(--primary)]">Research Output</p>
+            <h1 className="mt-2 text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-[var(--foreground)]">
+              Publications
+            </h1>
+            <p className="mt-4 max-w-3xl text-sm sm:text-base leading-relaxed text-[var(--muted)]">
+              Selected research work focused on dialogue systems and experimental task analysis in applied AI.
+            </p>
+          </div>
+
+          <div className="mt-6 sm:mt-8 space-y-5 sm:space-y-6">
+            {publications.map((pub) => (
               <article
-                key={index}
-                className="p-6 sm:p-8 rounded-lg bg-white dark:bg-black border border-black dark:border-white hover:opacity-80 transition-opacity"
+                key={pub.title}
+                className="rounded-2xl border border-[var(--border)] bg-[var(--surface)] p-6 sm:p-7 shadow-[0_12px_30px_rgba(25,38,35,0.08)]"
                 itemScope
                 itemType="https://schema.org/ScholarlyArticle"
               >
-                <h2 className="text-xl sm:text-2xl font-bold text-black dark:text-white mb-3" itemProp="headline">
+                <h2 className="text-xl sm:text-2xl font-semibold text-[var(--foreground)]" itemProp="headline">
                   {pub.title}
                 </h2>
-                <p className="text-sm sm:text-base text-black dark:text-white mb-2 opacity-80" itemProp="author">
-                  {pub.authors}
+                <p className="mt-2 text-sm sm:text-base text-[var(--muted)]" itemProp="author">
+                  {pub.authors.join(", ")}
                 </p>
-                <p className="text-sm sm:text-base text-black dark:text-white mb-4 italic opacity-60">
+                <p className="mt-2 text-sm sm:text-base italic text-[var(--accent)]">
                   <span itemProp="publisher">{pub.venue}</span>, <span itemProp="datePublished">{pub.year}</span>
                 </p>
-                <p className="text-sm sm:text-base text-black dark:text-white mb-6 leading-relaxed opacity-80" itemProp="description">
+                <p className="mt-4 text-sm sm:text-base leading-relaxed text-[var(--muted)]" itemProp="description">
                   {pub.description}
                 </p>
               </article>
             ))}
           </div>
-        </div>
+        </section>
       </main>
 
       {articleSchema.map((schema, index) => (

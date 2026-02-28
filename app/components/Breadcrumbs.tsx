@@ -38,7 +38,7 @@ export default function Breadcrumbs() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
       <nav aria-label="Breadcrumb" className="max-w-6xl mx-auto px-4 sm:px-6 pt-24 pb-4">
-        <ol className="flex flex-wrap items-center gap-2 text-sm text-black dark:text-white opacity-70">
+        <ol className="flex flex-wrap items-center gap-2 text-sm text-[var(--muted)]">
           {breadcrumbItems.map((item, index) => (
             <li key={item.href} className="flex items-center">
               {index > 0 && (
@@ -47,13 +47,13 @@ export default function Breadcrumbs() {
                 </span>
               )}
               {index === breadcrumbItems.length - 1 ? (
-                <span className="opacity-100 font-medium" aria-current="page">
+                <span className="font-semibold text-[var(--foreground)]" aria-current="page">
                   {item.name}
                 </span>
               ) : (
                 <Link
                   href={item.href}
-                  className="hover:opacity-100 transition-opacity"
+                  className="hover:text-[var(--primary)] transition-colors"
                 >
                   {item.name}
                 </Link>
@@ -65,4 +65,3 @@ export default function Breadcrumbs() {
     </>
   );
 }
-

@@ -5,71 +5,85 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Education",
-  description: "Suyog Pipliwal's educational background. Master of Science in Artificial Intelligence from Queen Mary University of London and Bachelor of Technology in Computer Science from IIIT Guwahati.",
+  description:
+    "Suyog Pipliwal's educational background. Master of Science in Artificial Intelligence from Queen Mary University of London and Bachelor of Technology in Computer Science from IIIT Guwahati.",
   openGraph: {
     title: "Education - Suyog Pipliwal",
-    description: "Master of Science in Artificial Intelligence from Queen Mary University of London and Bachelor of Technology in Computer Science from IIIT Guwahati.",
+    description:
+      "Master of Science in Artificial Intelligence from Queen Mary University of London and Bachelor of Technology in Computer Science from IIIT Guwahati.",
   },
 };
 
+const education = [
+  {
+    degree: "Master of Science in Artificial Intelligence",
+    institution: "Queen Mary University of London",
+    location: "London, United Kingdom",
+    period: "September 2021 - September 2022",
+    description:
+      "Advanced study in machine learning, deep learning, NLP, and experimental research methods with a strong emphasis on practical model development.",
+    focus: ["Deep Learning", "NLP", "Research Methods", "AI Systems"],
+  },
+  {
+    degree: "Bachelor of Technology in Computer Science",
+    institution: "Indian Institute of Information Technology, Guwahati",
+    location: "Guwahati, India",
+    period: "June 2015 - May 2019",
+    description:
+      "Strong foundation in algorithms, software engineering, and system design, enabling end-to-end engineering from prototypes to production systems.",
+    focus: ["Algorithms", "Software Engineering", "System Design", "Programming"],
+  },
+];
+
 export default function EducationPage() {
   return (
-    <div className="min-h-screen bg-white font-sans dark:bg-black">
+    <div className="site-shell min-h-screen font-sans">
       <Navigation />
       <Breadcrumbs />
-      
-      {/* Education Section */}
-      <main className="py-8 sm:py-12 md:py-16 px-4 sm:px-6">
-        <div className="max-w-4xl mx-auto">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-black dark:text-white mb-8 sm:mb-12 md:mb-16">
-            Education
-          </h1>
-          <div className="space-y-6 sm:space-y-8">
-            {[
-              {
-                degree: "Master of Science in Artificial Intelligence",
-                institution: "Queen Mary University of London",
-                location: "London, United Kingdom",
-                period: "September 2021 - September 2022",
-                description: "Specialized in artificial intelligence, machine learning, and deep learning. Focused on advanced topics including neural networks, natural language processing, and research methodologies.",
-              },
-              {
-                degree: "Bachelor of Technology in Computer Science",
-                institution: "Indian Institute of Information Technology",
-                location: "Guwahati, India",
-                period: "June 2015 - May 2019",
-                description: "Comprehensive computer science curriculum covering algorithms, data structures, software engineering, and system design. Foundation in programming and software development.",
-              },
-            ].map((edu, index) => (
-              <div
-                key={index}
-                className="p-6 sm:p-8 rounded-lg bg-white dark:bg-black border border-black dark:border-white hover:opacity-80 transition-opacity"
+
+      <main className="px-4 sm:px-6 pb-10 sm:pb-14">
+        <section className="max-w-5xl mx-auto">
+          <div className="rounded-3xl border border-[var(--border)] bg-[var(--surface)] px-6 py-7 sm:px-8 sm:py-9">
+            <p className="text-sm font-medium text-[var(--primary)]">Academic Foundation</p>
+            <h1 className="mt-2 text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-[var(--foreground)]">
+              Education
+            </h1>
+            <p className="mt-4 max-w-3xl text-sm sm:text-base leading-relaxed text-[var(--muted)]">
+              My academic path blends computer science fundamentals with specialized AI training, shaping the way I build practical machine learning systems.
+            </p>
+          </div>
+
+          <div className="mt-6 sm:mt-8 space-y-5 sm:space-y-6">
+            {education.map((edu) => (
+              <article
+                key={edu.degree}
+                className="rounded-2xl border border-[var(--border)] bg-[var(--surface)] p-6 sm:p-7 shadow-[0_12px_30px_rgba(25,38,35,0.08)]"
               >
-                <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
+                <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4">
                   <div className="flex-1">
-                    <h3 className="text-xl sm:text-2xl font-bold text-black dark:text-white mb-2">
-                      {edu.degree}
-                    </h3>
-                    <p className="text-lg sm:text-xl text-black dark:text-white mb-1 opacity-80">
-                      {edu.institution}
-                    </p>
-                    <p className="text-sm sm:text-base text-black dark:text-white opacity-60">
-                      {edu.location}
-                    </p>
+                    <h2 className="text-xl sm:text-2xl font-semibold text-[var(--foreground)]">{edu.degree}</h2>
+                    <p className="mt-1 text-base sm:text-lg text-[var(--foreground)]/85">{edu.institution}</p>
+                    <p className="mt-1 text-sm sm:text-base text-[var(--muted)]">{edu.location}</p>
                   </div>
-                  <div className="text-left md:text-right mt-4 md:mt-0">
-                    <p className="text-sm sm:text-base text-black dark:text-white font-medium opacity-80">
-                      {edu.period}
-                    </p>
-                  </div>
+                  <p className="text-sm sm:text-base font-medium text-[var(--accent)]">{edu.period}</p>
                 </div>
-                <p className="text-sm sm:text-base text-black dark:text-white leading-relaxed opacity-80">
-                  {edu.description}
-                </p>
-              </div>
+
+                <p className="mt-4 text-sm sm:text-base leading-relaxed text-[var(--muted)]">{edu.description}</p>
+
+                <div className="mt-4 flex flex-wrap gap-2">
+                  {edu.focus.map((item) => (
+                    <span
+                      key={item}
+                      className="rounded-full border border-[var(--border)] bg-[var(--surface-alt)] px-3 py-1 text-xs sm:text-sm text-[var(--foreground)]"
+                    >
+                      {item}
+                    </span>
+                  ))}
+                </div>
+              </article>
             ))}
           </div>
-        </div>
+        </section>
       </main>
 
       <Footer />
